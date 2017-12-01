@@ -1,0 +1,26 @@
+{% load static %}
+<!doctype HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+</head>
+<body>
+	<div class="lose_box">
+		<h2 class="lose_info">You lose</h2>
+		<div class="lose_repeatgame_btn">Start over</div>
+	</div>
+	<div class="info_box">
+		<div class="info_time_box">Was <span class="info_time_counter"></span></div>
+		<div class="info_score_box">Score <span class="info_score_counter"></span></div>
+		<p class="info_ajax"></p>
+	</div>
+	<div class="field_box"></div>
+	<script>
+		var body = 'room_id=' + encodeURIComponent('{{room_id}}') +
+	    '&key=' + encodeURIComponent('{{key}}') +
+	    '&csrfmiddlewaretoken=' + encodeURIComponent('{{csrf_token}}');
+	</script>
+</body>
+</html>
+<script type="text/javascript" src="{% static 'core.js' %}"></script>

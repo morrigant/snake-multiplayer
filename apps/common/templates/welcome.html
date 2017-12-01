@@ -1,0 +1,14 @@
+<!doctype HTML>
+<html>
+<head>
+	<title>Welcome !</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<form action="/" method="POST">
+		{% csrf_token %}
+		{{form}}
+		<input type="submit" value="Accept">
+	</form>
+</body>
+</html>
