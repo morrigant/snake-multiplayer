@@ -36,8 +36,7 @@ class ChannelView(View):
 
 		return json.dumps({'status' : 'OK', 'info' : {
 			'appleCell' : transform_coordinates(room.apple.x, room.apple.y),
-			'snakesCells': snakes_cells
-            }
+			'snakesCells': snakes_cells}
 		})
 
 

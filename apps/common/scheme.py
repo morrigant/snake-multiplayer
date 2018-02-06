@@ -282,8 +282,10 @@ def get_room(id=None):
 	rooms = Room.collector
 
 	if id == None:
-		if ( len(rooms) == 0 ) or ( len(rooms[-1].snakes) >= 4 ):
-			return Room(4)
-
+	    if ( len(rooms) == 0 ) or ( len(rooms[-1].snakes) >= 4 ):
+	        return Room(4)
+	    else:
+	        return rooms[len(rooms)-1]
+	    
 	elif len(rooms) >= id:
 		return rooms[id-1]
